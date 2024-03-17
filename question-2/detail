@@ -1,0 +1,21 @@
+In typeScript, array destructuring allows you to extract elements from arrays or properties from objects and assign them to variables. The syntax allows you to specify the variables to be assigned and the order in which elements or properties should be extracted.
+
+Now, let's clarify the indices:
+
+If you have an array with three elements, the indices would be 0, 1, and 2.
+When we refer to the "second" and "third" elements, we mean index 1 and index 2 respectively.
+For example, given the array laptops_info:
+
+const laptops_info = [
+    { make: "Apple", model: "Mac Book Air 15", year: 2023 }, // Index 0
+    { make: "Lenovo", model: "Ideapad", year: 2022 },        // Index 1
+    { make: "Acer", model: "Nitro V15", year: 2019 },        // Index 2
+];
+To destructure and assign the "Lenovo" and "Acer" laptops to laptop1 and laptop3, respectively, you should use the following destructuring assignment:
+
+const [, laptop1, laptop3] = laptops_info;
+Here's what happens:
+The empty space at the beginning of the destructuring pattern [, laptop1, laptop3] indicates that we're ignoring the first element of laptops_info.
+laptop1 will be assigned the object at index 1 of laptops_info (the "Lenovo" laptop).
+laptop3 will be assigned the object at index 2 of laptops_info (the "Acer" laptop).
+This way, when you log laptop1 and laptop3, you'll get the details of the "Lenovo" and "Acer" laptops respectively.
